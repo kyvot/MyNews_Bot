@@ -38,7 +38,7 @@
   </tr>
   <tr>
     <td><img src="screenshots/mainpage.avif" width="250"></td>
-    <td><video src="screenshots/mynews.mp4" width="250" autoplay loop muted playsinline></video></td>
+    <td><video src="https://github.com/user-attachments/assets/c8f2b98e-5c82-481a-8251-88b7fd5512dd" width="250" autoplay loop muted playsinline></video></td>
     <td><img src="screenshots/autopublic.avif" width="250"></td>
   </tr>
   <tr>
