@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:18.4-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-db_password}
+      POSTGRES_DB: ${DB_NAME:-news_db}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - ${SSD_MOUNT:-/mnt/ssd}/postgres:/var/lib/postgresql
+    shm_size: 128m
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+
+  app:
+    build: .
+    restart: unless-stopped
+    network_mode: host
+    env_file: src/.env
+    depends_on:
+      db:
+        condition: service_healthy
