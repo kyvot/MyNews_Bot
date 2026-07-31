@@ -38,7 +38,7 @@
   </tr>
   <tr>
     <td><img src="screenshots/mainpage.avif" width="250"></td>
-    <td><img src="screenshots/mynews.gif" width="250"></td>
+    <td><video src="screenshots/mynews.mp4" width="250" autoplay loop muted playsinline></video></td>
     <td><img src="screenshots/autopublic.avif" width="250"></td>
   </tr>
   <tr>
